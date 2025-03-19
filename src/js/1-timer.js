@@ -14,6 +14,7 @@ const minsSn = document.querySelector('[data-minutes]');
 const secsSn = document.querySelector('[data-seconds]');
 
 startBttn.addEventListener('click', handleTimer);
+startBttn.disabled = true;
 
 const options = {
   enableTime: true,
@@ -30,7 +31,6 @@ const options = {
                 messageSize: '16px',
                 messageColor: 'rgb(255, 255, 255)',
             });
-            startBttn.disabled = true;
         } else {
             userSelectedDate = selectedDates[0] - Date.now();
             startBttn.disabled = false;
